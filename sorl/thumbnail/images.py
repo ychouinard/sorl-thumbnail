@@ -1,3 +1,4 @@
+import json
 import re
 import urllib2
 from django.core.files.base import File, ContentFile
@@ -5,10 +6,7 @@ from django.core.files.storage import Storage, default_storage
 from django.core.urlresolvers import reverse
 from django.utils.encoding import force_unicode
 from django.utils.functional import LazyObject
-try:
-    from django.utils import simplejson as json
-except ImportError:
-    import json
+
 from sorl.thumbnail.conf import settings
 from sorl.thumbnail.helpers import ThumbnailError, tokey, get_module_class
 from sorl.thumbnail import default

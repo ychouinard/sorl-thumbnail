@@ -1,11 +1,8 @@
 import hashlib
+import json
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.encoding import smart_str
 from django.utils.importlib import import_module
-try:
-    from django.utils import simplejson as json
-except ImportError:
-    import json
 
 
 class ThumbnailError(Exception):
